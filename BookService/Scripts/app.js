@@ -1,4 +1,4 @@
-﻿var ViewMode = function() {
+﻿var ViewModel = function() {
     var self = this;
     self.books = ko.observableArray();
     self.error = ko.observable();

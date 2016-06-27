@@ -16,9 +16,7 @@ namespace BookService
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                "~/Scripts/knockout-{version}.js",
-                "~/Scripts/app.js"));
+           
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
@@ -27,6 +25,10 @@ namespace BookService
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+               "~/Scripts/knockout-{version}.js",
+               "~/Scripts/app.js"));
         }
     }
 }
