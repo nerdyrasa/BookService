@@ -104,6 +104,8 @@ namespace BookService.Controllers
             db.Books.Add(book);
             await db.SaveChangesAsync();
 
+            db.Entry(book).Reference(x => x.Author).Load();
+
             var dto = new BookDto()
             {
                 Id = book.Id,
