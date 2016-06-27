@@ -22,48 +22,40 @@ namespace BookService.Migrations
             //  to avoid creating duplicate seed data. E.g.
             
             context.Authors.AddOrUpdate(x => x.Id,
-                new Author() {Id = 1, Name = "Jane Austen"},
-                new Author() {Id = 2, Name = "Charles Dickens"},
-                new Author() {Id = 3, Name = "Miguel de Cervantes"}
+                new Author() {Id = 1, Name = "Jon Galloway" },
+                new Author() {Id = 2, Name = "Jamie Kurtz"},
+                new Author() {Id = 3, Name = "Adam Freeman"}
                 );
 
             context.Books.AddOrUpdate(x => x.Id,
                 new Book()
                 {
                     Id = 1,
-                    Title = "Pride and Prejudice",
-                    Year = 1813,
+                    Title = "Professional ASP.NET MVC 5",
+                    Year = 2014,
                     AuthorId = 1,
-                    Price = 9.99M,
-                    Genre = "Comedy of manners"
+                    Price = 36.90M,
+                    Genre = "Nerd"
                 },
                 new Book()
                 {
                     Id = 2,
-                    Title = "Northanger Abbey",
-                    Year = 1817,
-                    AuthorId = 1,
-                    Price = 12.95M,
-                    Genre = "Gothic parody"
+                    Title = "ASP.NET Web API 2",
+                    Year = 2014,
+                    AuthorId = 2,
+                    Price = 26.58M,
+                    Genre = "Nerd"
                 },
                 new Book()
                 {
                     Id = 3,
-                    Title = "David Copperfield",
-                    Year = 1850,
-                    AuthorId = 2,
-                    Price = 15,
-                    Genre = "Bildungsroman"
-                },
-                new Book()
-                {
-                    Id = 4,
-                    Title = "Don Quixote",
-                    Year = 1617,
+                    Title = "Pro AngularJS ",
+                    Year = 2014,
                     AuthorId = 3,
-                    Price = 8.95M,
-                    Genre = "Picaresque"
+                    Price = 40.22M,
+                    Genre = "Nerd"
                 }
+        
                 );
         }
     }
